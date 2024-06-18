@@ -1,0 +1,10 @@
+[package]
+name = "warmup"
+description = "Calculates the repetitions required for a warmup."
+repository = "https://github.com/patrickbucher/warmup"
+license = "MIT"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.5.7", features = ["derive"] }
