@@ -21,8 +21,8 @@ fn main() {
     let args = Args::parse();
     let lift: f32 = args.weight * args.reps as f32;
     for step in args.buildup {
-        let reps = (lift / step).round();
-        println!("{:>5.2} * {}", step, reps);
+        let reps = (lift / step).round() as usize;
+        println!("{:>2} * {:>4.2}", reps, step);
     }
-    println!("{:>5.2} * {}", args.weight, args.reps);
+    println!("{:>2} * {:>4.2}", args.reps, args.weight);
 }
