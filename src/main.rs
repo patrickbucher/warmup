@@ -20,9 +20,12 @@ struct Args {
 fn main() {
     let args = Args::parse();
     let lift: f32 = args.weight * args.reps as f32;
-    for step in args.buildup {
+    let mut steps: Vec<f32> = Vec::new();
+    steps.push(args.weight);
+    steps.extend(args.buildup);
+    steps.sort_by(|l, r| l.partial_cmp(r).unwrap());
+    for step in steps {
         let reps = (lift / step).round() as usize;
         println!("{:>2} * {:>4.2}", reps, step);
     }
-    println!("{:>2} * {:>4.2}", args.reps, args.weight);
 }
