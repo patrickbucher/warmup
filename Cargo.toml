@@ -3,7 +3,7 @@ name = "warmup"
 description = "Calculates the repetitions required for a warmup."
 repository = "https://github.com/patrickbucher/warmup"
 license = "MIT"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 
 [dependencies]
